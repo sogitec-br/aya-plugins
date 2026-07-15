@@ -1,7 +1,7 @@
 {
   "name": "aya-sogi",
-  "displayName": "AYA SOGI Beta",
-  "version": "0.1.0",
+  "displayName": "AyA",
+  "version": "0.1.1",
   "description": "Cliente beta somente leitura para dados autorizados SOGI e metodologia CEPPEM via MCP.",
   "author": {
     "name": "CEPPEM"

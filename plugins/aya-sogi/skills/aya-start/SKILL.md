@@ -1,6 +1,6 @@
 ---
 name: aya-start
-description: Inicializa e orienta o primeiro uso do workspace AYA SOGI. Use quando o usuario abrir o projeto, pedir onboarding, conectar o SOGI ou perguntar como comecar.
+description: Inicializa e orienta o primeiro uso da AyA. Use quando o usuario abrir o projeto, pedir onboarding, conectar o SOGI ou perguntar como comecar.
 ---
 
 # Iniciar AYA

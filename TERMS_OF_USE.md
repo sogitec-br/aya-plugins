@@ -1,8 +1,8 @@
-# Termos de uso da AYA SOGI
+# Termos de uso da AyA
 
 ## Escopo
 
-Estes termos cobrem o uso de releases oficiais e não modificadas do plugin AYA SOGI. O repositório
+Estes termos cobrem o uso de releases oficiais e não modificadas do plugin AyA. O repositório
 é publicamente visível, mas seu conteúdo é proprietário e não é open source.
 
 ## Permissão limitada

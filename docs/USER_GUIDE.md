@@ -1,4 +1,4 @@
-# Guia do usuário AYA SOGI
+# Guia do usuário AyA
 
 ## Para que serve
 

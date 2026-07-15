@@ -2,7 +2,7 @@
 
 ## Visão geral
 
-O plugin AYA SOGI contém instruções e configuração para acessar um MCP remoto. Ele não contém
+O plugin AyA contém instruções e configuração para acessar um MCP remoto. Ele não contém
 credenciais, tokens OAuth nem uma cópia dos dados operacionais do SOGI.
 
 ## Fluxo de dados

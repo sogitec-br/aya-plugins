@@ -1,11 +1,11 @@
-# Arquitetura pública da AYA SOGI
+# Arquitetura pública da AyA
 
 ## Componentes
 
 ```text
 Codex ou Claude
     ↓
-Plugin AYA SOGI
+Plugin AyA
     ├── skills e referências operacionais
     └── configuração MCP
             ↓ OAuth individual

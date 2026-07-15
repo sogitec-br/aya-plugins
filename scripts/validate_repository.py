@@ -13,6 +13,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 PLUGIN = ROOT / "plugins" / "aya-sogi"
 EXPECTED_MCP_URL = "https://mcp.dev.ceppem.com/mcp"
+EXPECTED_AVATAR = "./assets/aya-agent-avatar.jpg"
 SEMVER = re.compile(r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?$")
 SECRET_PATTERNS = {
     "private key": re.compile(r"BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY"),
@@ -46,6 +47,7 @@ def require_paths(errors: list[str]) -> None:
         PLUGIN / ".codex-plugin" / "plugin.json",
         PLUGIN / ".claude-plugin" / "plugin.json",
         PLUGIN / ".mcp.json",
+        PLUGIN / "assets" / "aya-agent-avatar.jpg",
         PLUGIN / "skills",
         PLUGIN / "references",
     ]
@@ -76,8 +78,18 @@ def validate_manifests(errors: list[str]) -> None:
         if not isinstance(author, dict) or not author.get("name"):
             errors.append(f"manifesto {label}: author.name é obrigatório")
 
+    if codex.get("interface", {}).get("displayName") != "AyA":
+        errors.append("manifesto Codex: interface.displayName deve ser 'AyA'")
+    if claude.get("displayName") != "AyA":
+        errors.append("manifesto Claude: displayName deve ser 'AyA'")
+
     if codex.get("mcpServers") != "./.mcp.json":
         errors.append("manifesto Codex deve apontar mcpServers para './.mcp.json'")
+
+    codex_interface = codex.get("interface", {})
+    for field in ("composerIcon", "logo", "logoDark"):
+        if codex_interface.get(field) != EXPECTED_AVATAR:
+            errors.append(f"manifesto Codex: interface.{field} deve apontar para {EXPECTED_AVATAR!r}")
 
     codex_url = mcp.get("mcpServers", {}).get("sogi", {}).get("url")
     claude_url = claude.get("mcpServers", {}).get("sogi", {}).get("url")
@@ -108,6 +120,8 @@ def validate_manifests(errors: list[str]) -> None:
         entry = claude_plugins[0]
         if entry.get("name") != "aya-sogi":
             errors.append("entrada Claude deve se chamar 'aya-sogi'")
+        if entry.get("displayName") != "AyA":
+            errors.append("entrada Claude: displayName deve ser 'AyA'")
         if entry.get("source") != "./plugins/aya-sogi":
             errors.append("entrada Claude deve apontar para './plugins/aya-sogi'")
 
@@ -186,7 +200,7 @@ def main() -> int:
         return 1
 
     skill_count = len(list((PLUGIN / "skills").glob("*/SKILL.md")))
-    print(f"Validação concluída: AYA SOGI {(ROOT / 'VERSION').read_text().strip()}, {skill_count} skills.")
+    print(f"Validação concluída: AyA {(ROOT / 'VERSION').read_text().strip()}, {skill_count} skills.")
     return 0
 
 

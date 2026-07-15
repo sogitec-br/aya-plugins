@@ -32,6 +32,6 @@ jobs:
             "dist/AYA-SOGI-CLAUDE-v${VERSION}.zip" \
             "dist/AYA-SOGI-CODEX-v${VERSION}.zip" \
             "dist/SHA256SUMS.txt" \
-            --title "AYA SOGI ${VERSION}" \
+            --title "AyA ${VERSION}" \
             --generate-notes \
             --verify-tag

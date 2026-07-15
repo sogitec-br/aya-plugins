@@ -1,4 +1,4 @@
-# Instalar AYA SOGI no Claude Code
+# Instalar AyA no Claude Code
 
 ## Requisitos
 

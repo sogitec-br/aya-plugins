@@ -1,6 +1,14 @@
 # Changelog
 
-Todas as mudanças relevantes da AYA SOGI são registradas neste arquivo.
+Todas as mudanças relevantes da AyA são registradas neste arquivo.
+
+## [0.1.1] - 2026-07-15
+
+### Adicionado
+
+- avatar oficial da AyA como ícone e logo do plugin no Codex;
+- nome público simplificado para `AyA` no Codex e Claude;
+- inclusão dos assets visuais nos pacotes Codex e Claude.
 
 ## [0.1.0] - 2026-07-15
 
