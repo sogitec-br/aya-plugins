@@ -9,7 +9,7 @@
       "name": "aya-sogi",
       "displayName": "AyA",
       "source": "./plugins/aya-sogi",
-      "description": "Cliente beta somente leitura para o MCP SOGI/CEPPEM.",
+      "description": "Conhecimento, análises e operações autorizadas no MCP SOGI/CEPPEM.",
       "category": "productivity"
     }
   ]

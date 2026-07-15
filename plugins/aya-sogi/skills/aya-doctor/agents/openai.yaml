@@ -1,7 +1,7 @@
 interface:
-  display_name: "Metodologia SOGI e CEPPEM"
-  short_description: "Consulte o Agentic RAG metodológico oficial"
-  default_prompt: "Use $sogi-methodology para explicar este conceito com base na metodologia oficial."
+  display_name: "Diagnóstico AyA"
+  short_description: "Diagnostique instalação, OAuth e conexão SOGI"
+  default_prompt: "Use $aya-doctor para diagnosticar por que a AyA ou o MCP SOGI não está disponível."
 
 dependencies:
   tools:

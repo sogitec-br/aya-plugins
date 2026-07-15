@@ -38,6 +38,10 @@ codex plugin add aya-sogi@aya-plugins
 
 Abra uma nova tarefa após atualizar.
 
+Ao migrar de `0.1.x` para `0.2.x`, a consulta continua funcionando com a sessão anterior, mas o
+cadastro pode pedir **Authenticate** uma vez para consentir com o novo escopo de criação. Faça essa
+reconexão pela interface do Codex; nunca cole a senha na conversa.
+
 ## Diagnóstico
 
 Verifique, nesta ordem:

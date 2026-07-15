@@ -1,7 +1,7 @@
 {
   "name": "aya-sogi",
-  "version": "0.1.1",
-  "description": "Cliente beta somente leitura para dados autorizados SOGI e metodologia CEPPEM via MCP.",
+  "version": "0.2.0",
+  "description": "Cliente operacional para dados autorizados, metodologia CEPPEM e cadastro aprovado via MCP.",
   "author": {
     "name": "CEPPEM",
     "url": "https://github.com/sogitec-br"
@@ -9,23 +9,24 @@
   "homepage": "https://github.com/sogitec-br/aya-plugins",
   "repository": "https://github.com/sogitec-br/aya-plugins",
   "license": "LicenseRef-AYA-Proprietary",
-  "keywords": ["aya", "sogi", "ceppem", "mcp", "agentic-rag", "analytics"],
+  "keywords": ["aya", "sogi", "ceppem", "mcp", "agentic-rag", "analytics", "retention", "orders"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "AyA",
-    "shortDescription": "Consulte dados autorizados e metodologia SOGI/CEPPEM.",
-    "longDescription": "Workflows somente leitura para consultar o Agentic RAG metodológico, descobrir consultas autorizadas e analisar dados SOGI com proveniência separada.",
+    "shortDescription": "Consulte, analise e opere fluxos autorizados SOGI/CEPPEM.",
+    "longDescription": "Consulta o Agentic RAG metodológico, descobre leituras autorizadas, aplica playbooks de portfólio, retenção e pedidos e conduz cadastro de cliente com revisão e aprovação explícitas.",
     "developerName": "CEPPEM",
     "category": "Business & Operations",
-    "capabilities": ["Read"],
+    "capabilities": ["Read", "Write"],
     "websiteURL": "https://github.com/sogitec-br/aya-plugins",
     "privacyPolicyURL": "https://github.com/sogitec-br/aya-plugins/blob/main/PRIVACY.md",
     "termsOfServiceURL": "https://github.com/sogitec-br/aya-plugins/blob/main/TERMS_OF_USE.md",
     "defaultPrompt": [
       "Explique este conceito com base na metodologia CEPPEM.",
-      "Mostre a distribuição dos pedidos por status.",
-      "Analise os dados SOGI segundo a metodologia oficial."
+      "Analise a saúde da carteira e os riscos de retenção.",
+      "Mostre o pipeline de pedidos por status.",
+      "Prepare o cadastro deste cliente para minha revisão."
     ],
     "composerIcon": "./assets/aya-agent-avatar.jpg",
     "logo": "./assets/aya-agent-avatar.jpg",

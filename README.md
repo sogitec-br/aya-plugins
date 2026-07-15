@@ -2,15 +2,16 @@
 
 Plugins oficiais da AYA para Codex e Claude Code, conectados ao MCP SOGI/CEPPEM.
 
-> **Beta:** a versão `0.1.x` usa `https://mcp.dev.ceppem.com/mcp`. Utilize somente com contas e
+> **Beta:** a versão `0.2.x` usa `https://mcp.dev.ceppem.com/mcp`. Utilize somente com contas e
 > dados autorizados para o ambiente de desenvolvimento.
 
 ## O que a AYA oferece
 
 - consulta ao Agentic RAG de metodologia SOGI/CEPPEM;
 - descoberta de consultas operacionais autorizadas;
-- execução somente leitura usando o contrato devolvido pelo MCP;
-- análises e relatórios com proveniência e minimização de dados pessoais;
+- análises de portfólio, retenção e pipeline de pedidos usando o contrato vivo do MCP;
+- relatórios com proveniência e minimização de dados pessoais;
+- cadastro de cliente com validação, prévia, aprovação explícita e proteção contra repetição;
 - autenticação OAuth individual, sem credenciais dentro do plugin.
 
 ## Instalação no Codex
@@ -53,8 +54,31 @@ Mostre a distribuição dos pedidos por status no período autorizado.
 Analise os dados observados segundo a metodologia CEPPEM.
 ```
 
+```text
+Prepare o cadastro deste cliente para eu revisar antes da execução.
+```
+
+Consultas são somente leitura. Cadastro é uma capacidade de escrita separada: preparar não cria o
+cliente, a mesma pessoa revisa e aprova a prévia no navegador e somente depois a AyA executa o
+`operation_id`. Nunca use um cadastro real para testar a conexão.
+
 Cada pessoa deve autenticar sua própria conta. Nunca envie senha, token, cookie ou header em uma
 conversa, issue ou arquivo do projeto.
+
+## Skills incluídas
+
+- `aya-start` e `aya-doctor`: onboarding e diagnóstico de plugin, MCP e OAuth;
+- `sogi-discovery` e `sogi-operations`: contrato vivo e consultas operacionais de leitura;
+- `sogi-methodology`: conhecimento oficial recuperado pelo Agentic RAG;
+- `sogi-portfolio-analysis`: saúde, receita, concentração e geografia da carteira;
+- `sogi-retention-analysis`: inatividade, churn, risco, retenção e reativação;
+- `sogi-order-pipeline`: funil, status, valores e gargalos de pedidos;
+- `sogi-customer-registration`: preparação, aprovação e execução de cadastro;
+- `sogi-reporting`: proveniência e governança para relatórios e exportações.
+
+As skills de negócio usam apenas as tools públicas do MCP. Elas não copiam o runtime de agentes do
+CEPPEM nem dependem de nomes de campos, IDs, códigos de status ou ferramentas de visualização
+fixos.
 
 ## Documentação
 

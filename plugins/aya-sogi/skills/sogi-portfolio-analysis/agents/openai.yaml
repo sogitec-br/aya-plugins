@@ -1,7 +1,7 @@
 interface:
-  display_name: "Metodologia SOGI e CEPPEM"
-  short_description: "Consulte o Agentic RAG metodológico oficial"
-  default_prompt: "Use $sogi-methodology para explicar este conceito com base na metodologia oficial."
+  display_name: "Análise de portfólio SOGI"
+  short_description: "Analise saúde, receita e geografia da carteira"
+  default_prompt: "Use $sogi-portfolio-analysis para analisar esta carteira com dados atuais do SOGI."
 
 dependencies:
   tools:

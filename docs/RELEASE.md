@@ -44,7 +44,9 @@ marketplace portátil e o plugin com `.codex-plugin/plugin.json` e `.mcp.json`.
 6. criar e enviar a tag `vX.Y.Z`;
 7. o workflow cria a GitHub Release e anexa os artefatos;
 8. validar instalação em contas novas de Codex e Claude;
-9. validar OAuth e uma intenção autorizada somente leitura.
+9. validar OAuth, metodologia e uma intenção autorizada somente leitura;
+10. validar a preparação de cadastro com dados sintéticos e confirmar que nenhum POST ocorre sem
+    aprovação; uma execução real exige um cenário de teste previamente autorizado.
 
 ## Rollback
 

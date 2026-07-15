@@ -41,6 +41,10 @@ Nunca cole senha, token, cookie ou header na conversa.
 
 Se o plugin continuar antigo, confirme a versão instalada, remova e instale novamente.
 
+Ao migrar de `0.1.x` para `0.2.x`, a consulta continua funcionando com a sessão anterior, mas o
+cadastro pode pedir nova autenticação uma vez para consentir com o escopo de criação. Conclua o
+fluxo no navegador; nunca cole a senha na conversa.
+
 ## Diagnóstico
 
 Use `/plugin` para verificar marketplace, instalação, versão e erros. Depois confirme OAuth, MCP e

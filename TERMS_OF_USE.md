@@ -31,7 +31,7 @@ confidenciais em issues, pull requests ou outros canais públicos.
 
 ## Beta
 
-A série `0.1.x` utiliza um ambiente de desenvolvimento e pode mudar sem garantia de estabilidade.
+A série `0.2.x` utiliza um ambiente de desenvolvimento e pode mudar sem garantia de estabilidade.
 Use apenas com autorização explícita para esse ambiente.
 
 ## Suspensão e término

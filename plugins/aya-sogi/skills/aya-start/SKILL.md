@@ -16,7 +16,11 @@ description: Inicializa e orienta o primeiro uso da AyA. Use quando o usuario ab
    leitura fornecida pelo usuario.
 6. Nao execute uma consulta de negocio apenas para testar sem informar ao usuario qual intencao
    sera consultada.
-7. Ao concluir, explique que toda operacao de dados segue
-   `descobrir -> validar schema -> executar`.
+7. Ao concluir, explique as tres rotas disponiveis:
+   - conhecimento: `consultar_metodologia` diretamente;
+   - dados operacionais: `descobrir -> validar schema -> executar`;
+   - cadastro de cliente: `preparar -> revisao e aprovacao no navegador -> executar`.
+8. Informe que a rota de cadastro e uma escrita separada, pode exigir novo consentimento OAuth
+   para o escopo de criacao e nunca deve ser usada como teste de conectividade.
 
 Nunca solicite que o usuario cole senha, token ou cookie na conversa.

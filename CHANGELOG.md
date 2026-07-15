@@ -2,6 +2,29 @@
 
 Todas as mudanças relevantes da AyA são registradas neste arquivo.
 
+## [0.2.0] - 2026-07-15
+
+### Adicionado
+
+- skills de análise de portfólio, retenção e pipeline de pedidos adaptadas ao contrato vivo do
+  MCP, sem dependência do harness interno do `ceppem-agent`;
+- skill de cadastro de cliente com preparação, pendências, reautorização, aprovação no navegador
+  e execução por `operation_id`;
+- metadados de interface e dependência MCP para todas as skills no Codex;
+- referências compartilhadas de playbooks analíticos e governança de escrita.
+
+### Alterado
+
+- manifests e documentação passam a representar consultas de leitura e cadastro explicitamente
+  aprovado;
+- onboarding, diagnóstico, descoberta, operações e relatórios reconhecem as três rotas do MCP;
+- versão dos pacotes Codex e Claude atualizada para `0.2.0`.
+
+### Removido
+
+- skill genérica `sogi-analytics`, substituída por playbooks de negócio com gatilhos e limites mais
+  precisos.
+
 ## [0.1.1] - 2026-07-15
 
 ### Adicionado

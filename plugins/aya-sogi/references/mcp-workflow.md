@@ -1,19 +1,35 @@
 # Contrato do gateway SOGI
 
-O contrato funcional separa uma tool de conhecimento de duas tools de dados:
+O MCP separa conhecimento, consultas operacionais e cadastro em rotas diferentes.
 
-- `consultar_metodologia(pergunta)` — Agentic RAG SOGI/CEPPEM
-- `sogi_descobrir_consultas(query, limit)`
-- `sogi_executar_consulta(tool_id, arguments)`
+## Conhecimento metodologico
 
-Use `consultar_metodologia` diretamente para conceitos, funcionamento do SOGI, interpretacao e
-recomendacoes CEPPEM. Ela nao usa `tool_id`. Se a tool nao aparecer no servico conectado, informe
-que a camada metodologica ainda nao esta disponivel nessa versao.
+Use `consultar_metodologia(pergunta)` diretamente para conceitos, funcionamento do SOGI,
+interpretacao e recomendacoes CEPPEM. Essa tool nao usa descoberta nem `tool_id` e nao devolve
+fatos operacionais atuais.
 
-Para dados operacionais, sempre descubra primeiro. A descoberta devolve `tool_id`, titulo,
-descricao, scope e `input_schema`. Use somente um ID dessa resposta e envie argumentos que validem
-exatamente contra o schema. O executor resolve metodo e path no servidor; clientes nunca constroem
-URLs internas do servico operacional.
+## Consultas operacionais
 
-Metadados de selecao explicam qual seletor ranqueou o catalogo, mas nao sao uma autorizacao. Uma
-shortlist vazia e uma abstencao segura.
+Use duas tools para leitura:
+
+1. `sogi_descobrir_consultas(query, limit)` devolve os contratos autorizados mais aderentes;
+2. `sogi_executar_consulta(tool_id, arguments)` executa um contrato descoberto.
+
+Sempre descubra primeiro. Compare titulo, descricao, escopo e `input_schema`; preserve o `tool_id`
+exatamente e envie apenas argumentos validos para aquele schema. Nao reutilize contrato de outra
+sessao, invente IDs ou construa URLs internas. Uma shortlist vazia e abstencao segura, nao
+autorizacao para tentar outro endpoint.
+
+## Cadastro de cliente
+
+Use duas tools diretas, sem descoberta semantica:
+
+1. `sogi_preparar_cadastro_cliente(dados)` consulta o contrato vivo, valida e enriquece os dados;
+2. `sogi_cadastrar_cliente(operation_id)` executa somente uma operacao preparada e aprovada.
+
+A preparacao pode devolver pendencias, valores de lookup, reautorizacao, escrita desabilitada ou
+um `approval_url`. O usuario autenticado revisa e confirma na pagina segura; somente depois a tool
+de execucao recebe o `operation_id`. Dados do cliente, tenant, representante e token da aprovacao
+nunca entram na chamada de execucao.
+
+Leia `customer-registration.md` para os estados e as regras de falha segura.

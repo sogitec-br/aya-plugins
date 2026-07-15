@@ -1,7 +1,7 @@
 interface:
-  display_name: "Metodologia SOGI e CEPPEM"
-  short_description: "Consulte o Agentic RAG metodológico oficial"
-  default_prompt: "Use $sogi-methodology para explicar este conceito com base na metodologia oficial."
+  display_name: "Cadastro de cliente SOGI"
+  short_description: "Prepare, aprove e execute cadastros com segurança"
+  default_prompt: "Use $sogi-customer-registration para preparar este cadastro e conduzir a aprovação antes da execução."
 
 dependencies:
   tools:

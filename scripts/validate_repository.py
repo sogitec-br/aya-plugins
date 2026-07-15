@@ -14,6 +14,18 @@ ROOT = Path(__file__).resolve().parent.parent
 PLUGIN = ROOT / "plugins" / "aya-sogi"
 EXPECTED_MCP_URL = "https://mcp.dev.ceppem.com/mcp"
 EXPECTED_AVATAR = "./assets/aya-agent-avatar.jpg"
+EXPECTED_SKILLS = {
+    "aya-doctor",
+    "aya-start",
+    "sogi-customer-registration",
+    "sogi-discovery",
+    "sogi-methodology",
+    "sogi-operations",
+    "sogi-order-pipeline",
+    "sogi-portfolio-analysis",
+    "sogi-reporting",
+    "sogi-retention-analysis",
+}
 SEMVER = re.compile(r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?$")
 SECRET_PATTERNS = {
     "private key": re.compile(r"BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY"),
@@ -50,6 +62,8 @@ def require_paths(errors: list[str]) -> None:
         PLUGIN / "assets" / "aya-agent-avatar.jpg",
         PLUGIN / "skills",
         PLUGIN / "references",
+        PLUGIN / "references" / "analysis-playbooks.md",
+        PLUGIN / "references" / "customer-registration.md",
     ]
     for path in required:
         if not path.exists():
@@ -87,6 +101,8 @@ def validate_manifests(errors: list[str]) -> None:
         errors.append("manifesto Codex deve apontar mcpServers para './.mcp.json'")
 
     codex_interface = codex.get("interface", {})
+    if set(codex_interface.get("capabilities", [])) != {"Read", "Write"}:
+        errors.append("manifesto Codex: capabilities deve conter Read e Write")
     for field in ("composerIcon", "logo", "logoDark"):
         if codex_interface.get(field) != EXPECTED_AVATAR:
             errors.append(f"manifesto Codex: interface.{field} deve apontar para {EXPECTED_AVATAR!r}")
@@ -153,13 +169,36 @@ def validate_skills(errors: list[str]) -> None:
         metadata = parse_frontmatter(path, errors)
         name = metadata.get("name", "")
         description = metadata.get("description", "")
+        skill_text = path.read_text(encoding="utf-8")
         if name != path.parent.name:
             errors.append(f"{path.relative_to(ROOT)}: name deve ser {path.parent.name!r}")
         if not description:
             errors.append(f"{path.relative_to(ROOT)}: description é obrigatória")
+        if "TODO" in skill_text:
+            errors.append(f"{path.relative_to(ROOT)}: placeholder TODO não permitido")
         if name in names:
             errors.append(f"skill duplicada: {name}")
         names.add(name)
+
+        openai = path.parent / "agents" / "openai.yaml"
+        if not openai.is_file():
+            errors.append(f"{openai.relative_to(ROOT)}: metadados de interface ausentes")
+            continue
+        openai_text = openai.read_text(encoding="utf-8")
+        if f"${name}" not in openai_text:
+            errors.append(
+                f"{openai.relative_to(ROOT)}: default_prompt deve mencionar ${name}"
+            )
+        if 'value: "sogi"' not in openai_text or EXPECTED_MCP_URL not in openai_text:
+            errors.append(f"{openai.relative_to(ROOT)}: dependência MCP SOGI inválida")
+
+    if names != EXPECTED_SKILLS:
+        missing = sorted(EXPECTED_SKILLS - names)
+        extra = sorted(names - EXPECTED_SKILLS)
+        if missing:
+            errors.append(f"skills obrigatórias ausentes: {', '.join(missing)}")
+        if extra:
+            errors.append(f"skills inesperadas: {', '.join(extra)}")
 
 
 def validate_public_tree(errors: list[str]) -> None:

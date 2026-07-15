@@ -15,4 +15,8 @@ description: Produz relatorios e exportacoes rastreaveis a partir de consultas S
 7. Crie diretorios ou sobrescreva arquivos somente quando isso estiver dentro do pedido do usuario.
 8. Valide o arquivo gerado antes de entregar.
 
+Use as ferramentas nativas de documento, planilha, apresentacao ou visualizacao do cliente quando
+estiverem disponiveis. Esta skill governa conteudo e proveniencia SOGI; ela nao depende de um
+pipeline especifico de artefatos.
+
 Leia `../../references/governance.md` para as regras de minimizacao e proveniencia.
