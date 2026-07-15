@@ -1,6 +1,6 @@
 ---
 name: sogi-discovery
-description: Descobre consultas SOGI autorizadas e seleciona o contrato correto antes da execucao. Use para qualquer pergunta que dependa de dados do SOGI/AyA.
+description: Descobre consultas operacionais de leitura autorizadas no SOGI e seleciona o contrato correto antes da execucao. Use quando uma pergunta depender de fatos atuais do SOGI; nao use para metodologia nem para cadastro de cliente.
 ---
 
 # Descoberta de consultas
@@ -16,3 +16,5 @@ Leia `../../references/mcp-workflow.md` quando precisar revisar o contrato do ga
 6. Preserve o `tool_id` exatamente como retornado e use somente o schema da mesma descoberta.
 
 Nao execute durante uma tarefa que pediu apenas para listar ou avaliar consultas disponiveis.
+Nao use este fluxo para `consultar_metodologia`, `sogi_preparar_cadastro_cliente` ou
+`sogi_cadastrar_cliente`, que sao tools diretas e estaveis.

@@ -1,6 +1,6 @@
 ---
 name: sogi-operations
-description: Responde perguntas operacionais com consultas SOGI somente leitura. Use para pedidos, empresas, unidades, requisitos, avaliacoes ou outras entidades presentes no catalogo autorizado.
+description: Executa consultas operacionais de leitura no SOGI a partir do contrato descoberto. Use para empresas, unidades, requisitos, avaliacoes ou entidades sem playbook especializado; para portfolio, retencao e pedidos, combine com a skill de analise correspondente.
 ---
 
 # Consultas operacionais SOGI
@@ -12,6 +12,9 @@ description: Responde perguntas operacionais com consultas SOGI somente leitura.
 4. Execute `sogi_executar_consulta` com o `tool_id` descoberto e os argumentos validados.
 5. Responda primeiro com o resultado operacional objetivo e depois com filtros e limitacoes.
 6. Diferencie zero registros de consulta inexistente.
+7. Nao relaxe filtros ou periodos silenciosamente quando a resposta for vazia.
 
 Entidades citadas na descricao desta skill sao intencoes possiveis, nao garantia de acesso. O
 catalogo retornado para a identidade atual e a autoridade final.
+Esta skill nao executa cadastro de cliente: escritas usam o fluxo dedicado de preparacao,
+aprovacao e execucao.

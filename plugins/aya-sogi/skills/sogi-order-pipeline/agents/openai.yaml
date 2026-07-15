@@ -1,7 +1,7 @@
 interface:
-  display_name: "Metodologia SOGI e CEPPEM"
-  short_description: "Consulte o Agentic RAG metodológico oficial"
-  default_prompt: "Use $sogi-methodology para explicar este conceito com base na metodologia oficial."
+  display_name: "Pipeline de pedidos SOGI"
+  short_description: "Analise funil, status e gargalos dos pedidos"
+  default_prompt: "Use $sogi-order-pipeline para analisar o pipeline de pedidos no período solicitado."
 
 dependencies:
   tools:

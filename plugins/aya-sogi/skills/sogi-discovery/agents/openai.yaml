@@ -1,7 +1,7 @@
 interface:
-  display_name: "Metodologia SOGI e CEPPEM"
-  short_description: "Consulte o Agentic RAG metodológico oficial"
-  default_prompt: "Use $sogi-methodology para explicar este conceito com base na metodologia oficial."
+  display_name: "Descoberta SOGI"
+  short_description: "Descubra contratos autorizados de leitura"
+  default_prompt: "Use $sogi-discovery para localizar a consulta SOGI autorizada que atende a esta intenção."
 
 dependencies:
   tools:

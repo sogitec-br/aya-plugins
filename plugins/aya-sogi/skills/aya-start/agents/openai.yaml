@@ -1,7 +1,7 @@
 interface:
-  display_name: "Metodologia SOGI e CEPPEM"
-  short_description: "Consulte o Agentic RAG metodológico oficial"
-  default_prompt: "Use $sogi-methodology para explicar este conceito com base na metodologia oficial."
+  display_name: "Começar com a AyA"
+  short_description: "Conecte e conheça os fluxos principais da AyA"
+  default_prompt: "Use $aya-start para conectar a AyA e orientar meu primeiro uso do MCP SOGI."
 
 dependencies:
   tools:
