@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sogi": {
+      "type": "http",
+      "url": "https://mcp.dev.ceppem.com/mcp"
+    }
+  }
+}

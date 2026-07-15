@@ -1,0 +1,42 @@
+name: Problema no plugin
+description: Relate um problema de instalação ou comportamento sem incluir dados sensíveis.
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Não publique senha, token, cookie, header, resposta SOGI ou dado pessoal. Vulnerabilidades devem usar Security Advisories.
+  - type: dropdown
+    id: client
+    attributes:
+      label: Cliente
+      options:
+        - Codex Desktop
+        - Codex CLI
+        - Claude Code Desktop
+        - Claude Code CLI
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão do plugin
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição sanitizada
+      description: Explique o problema sem colar dados, credenciais ou payloads privados.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+    validations:
+      required: true
