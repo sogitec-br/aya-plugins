@@ -1,4 +1,4 @@
-# Instalar AYA SOGI no Codex
+# Instalar AyA no Codex
 
 ## Requisitos
 
@@ -16,13 +16,13 @@ codex plugin marketplace add sogitec-br/aya-plugins
 codex plugin add aya-sogi@aya-plugins
 ```
 
-Também é possível abrir o navegador de plugins no Codex e localizar **AYA SOGI Beta** depois de
+Também é possível abrir o navegador de plugins no Codex e localizar **AyA** depois de
 adicionar o marketplace.
 
 ## Primeiro uso
 
 1. feche a tarefa atual e abra uma nova tarefa;
-2. peça ao Codex para usar AYA SOGI;
+2. peça ao Codex para usar a AyA;
 3. selecione **Authenticate** quando o SOGI solicitar conexão;
 4. conclua o OAuth no navegador com sua própria conta;
 5. volte ao Codex e repita a pergunta.

@@ -1,6 +1,6 @@
 {
   "name": "aya-sogi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cliente beta somente leitura para dados autorizados SOGI e metodologia CEPPEM via MCP.",
   "author": {
     "name": "CEPPEM",
@@ -13,7 +13,7 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "AYA SOGI Beta",
+    "displayName": "AyA",
     "shortDescription": "Consulte dados autorizados e metodologia SOGI/CEPPEM.",
     "longDescription": "Workflows somente leitura para consultar o Agentic RAG metodológico, descobrir consultas autorizadas e analisar dados SOGI com proveniência separada.",
     "developerName": "CEPPEM",
@@ -26,6 +26,9 @@
       "Explique este conceito com base na metodologia CEPPEM.",
       "Mostre a distribuição dos pedidos por status.",
       "Analise os dados SOGI segundo a metodologia oficial."
-    ]
+    ],
+    "composerIcon": "./assets/aya-agent-avatar.jpg",
+    "logo": "./assets/aya-agent-avatar.jpg",
+    "logoDark": "./assets/aya-agent-avatar.jpg"
   }
 }

@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "aya-sogi",
-      "displayName": "AYA SOGI Beta",
+      "displayName": "AyA",
       "source": "./plugins/aya-sogi",
       "description": "Cliente beta somente leitura para o MCP SOGI/CEPPEM.",
       "category": "productivity"
