@@ -1,0 +1,31 @@
+{
+  "name": "aya-sogi",
+  "version": "0.1.0",
+  "description": "Cliente beta somente leitura para dados autorizados SOGI e metodologia CEPPEM via MCP.",
+  "author": {
+    "name": "CEPPEM",
+    "url": "https://github.com/sogitec-br"
+  },
+  "homepage": "https://github.com/sogitec-br/aya-plugins",
+  "repository": "https://github.com/sogitec-br/aya-plugins",
+  "license": "LicenseRef-AYA-Proprietary",
+  "keywords": ["aya", "sogi", "ceppem", "mcp", "agentic-rag", "analytics"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AYA SOGI Beta",
+    "shortDescription": "Consulte dados autorizados e metodologia SOGI/CEPPEM.",
+    "longDescription": "Workflows somente leitura para consultar o Agentic RAG metodológico, descobrir consultas autorizadas e analisar dados SOGI com proveniência separada.",
+    "developerName": "CEPPEM",
+    "category": "Business & Operations",
+    "capabilities": ["Read"],
+    "websiteURL": "https://github.com/sogitec-br/aya-plugins",
+    "privacyPolicyURL": "https://github.com/sogitec-br/aya-plugins/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/sogitec-br/aya-plugins/blob/main/TERMS_OF_USE.md",
+    "defaultPrompt": [
+      "Explique este conceito com base na metodologia CEPPEM.",
+      "Mostre a distribuição dos pedidos por status.",
+      "Analise os dados SOGI segundo a metodologia oficial."
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Metodologia SOGI e CEPPEM"
+  short_description: "Consulte o Agentic RAG metodológico"
+  default_prompt: "Use $sogi-methodology para explicar este conceito com base na metodologia oficial."

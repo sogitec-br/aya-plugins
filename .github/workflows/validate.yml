@@ -1,0 +1,34 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate repository
+        run: python3 scripts/validate_repository.py
+
+      - name: Build release packages
+        run: bash scripts/build_releases.sh
+
+      - name: Inspect artifacts
+        run: |
+          unzip -tq "dist/AYA-SOGI-CLAUDE-v$(cat VERSION).zip"
+          unzip -tq "dist/AYA-SOGI-CODEX-v$(cat VERSION).zip"
+          cd dist
+          sha256sum -c SHA256SUMS.txt

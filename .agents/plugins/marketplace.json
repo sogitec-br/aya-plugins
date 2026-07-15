@@ -1,0 +1,20 @@
+{
+  "name": "aya-plugins",
+  "interface": {
+    "displayName": "AYA Plugins"
+  },
+  "plugins": [
+    {
+      "name": "aya-sogi",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aya-sogi"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business & Operations"
+    }
+  ]
+}

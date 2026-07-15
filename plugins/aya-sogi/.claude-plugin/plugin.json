@@ -1,0 +1,19 @@
+{
+  "name": "aya-sogi",
+  "displayName": "AYA SOGI Beta",
+  "version": "0.1.0",
+  "description": "Cliente beta somente leitura para dados autorizados SOGI e metodologia CEPPEM via MCP.",
+  "author": {
+    "name": "CEPPEM"
+  },
+  "homepage": "https://github.com/sogitec-br/aya-plugins",
+  "repository": "https://github.com/sogitec-br/aya-plugins",
+  "license": "LicenseRef-AYA-Proprietary",
+  "skills": "./skills/",
+  "mcpServers": {
+    "sogi": {
+      "type": "http",
+      "url": "https://mcp.dev.ceppem.com/mcp"
+    }
+  }
+}

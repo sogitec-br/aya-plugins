@@ -1,0 +1,76 @@
+AYA PROPRIETARY SOURCE LICENSE
+Version 1.0, July 2026
+
+Copyright (c) 2026 Sogitec. All rights reserved.
+
+1. OWNERSHIP
+
+This repository and all of its contents, including source code, prompts, skills,
+documentation, configurations, workflows, designs, and other materials (the
+"Materials"), are proprietary works. Public visibility of the Materials does
+not make them open source and does not grant any rights except the limited
+permission stated below.
+
+2. LIMITED INSTALLATION AND USE PERMISSION
+
+An individually authorized end user may allow an official, supported Codex or
+Claude distribution channel to download, cache, install, and execute an
+unmodified official release of the AYA plugin solely to access services for
+which that user has been separately authenticated and authorized.
+
+This limited permission is personal, revocable, non-exclusive,
+non-transferable, and non-sublicensable. It does not grant access to any SOGI
+account, tenant, data, methodology, or service. Those permissions are governed
+separately and enforced by the service.
+
+3. NO REUSE OR REDISTRIBUTION
+
+Except for the limited technical copies strictly required by Section 2, no
+permission is granted to use, copy, reproduce, modify, adapt, translate, merge,
+publish, distribute, redistribute, sublicense, sell, rent, host, commercialize,
+reverse engineer, create derivative works from, train machine-learning systems
+on, include in datasets, or otherwise exploit the Materials, in whole or in
+part.
+
+You may not operate a modified or independently repackaged version of the
+plugin, remove ownership notices, represent a derivative as official, or use
+the Materials to build a competing or substitute product or service.
+
+4. GITHUB PLATFORM OPERATIONS
+
+Rights that GitHub requires under its Terms of Service to host, display, and
+provide platform features for this public repository are not expanded by this
+license. A technical ability to view, fork, clone, or download the repository
+does not grant permission to reuse the Materials.
+
+5. TRADEMARKS
+
+No permission is granted to use any trade name, trademark, service mark,
+product name, logo, or visual identity associated with AYA, CEPPEM, SOGI,
+Sogitec, or any other rights holder, except for truthful identification of an
+unmodified official plugin as required for authorized use.
+
+6. THIRD-PARTY MATERIALS
+
+Third-party components, names, and services remain subject to their respective
+licenses, terms, and ownership rights. This license grants no rights on behalf
+of third parties.
+
+7. TERMINATION
+
+The limited permission in Section 2 terminates automatically if these terms are
+violated or if the user's authorization to the relevant service is revoked.
+Upon termination, use of the plugin must stop.
+
+8. NO WARRANTY
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EXPRESS OR IMPLIED, TO THE MAXIMUM EXTENT PERMITTED BY LAW.
+
+9. NO IMPLIED RIGHTS
+
+All rights not expressly granted in Section 2 are reserved. No rights arise by
+estoppel, implication, public availability, or any other theory.
+
+For separate written authorization, contact the repository owner through the
+official channels listed in this repository.

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Relatar vulnerabilidade
+    url: https://github.com/sogitec-br/aya-plugins/security/advisories/new
+    about: Use um Security Advisory para falhas de segurança, autorização ou exposição de dados.

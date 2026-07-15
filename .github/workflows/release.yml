@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check tag and version
+        run: |
+          VERSION="$(tr -d '[:space:]' < VERSION)"
+          test "${GITHUB_REF_NAME}" = "v${VERSION}"
+
+      - name: Validate and build
+        run: bash scripts/build_releases.sh
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="$(tr -d '[:space:]' < VERSION)"
+          gh release create "v${VERSION}" \
+            "dist/AYA-SOGI-CLAUDE-v${VERSION}.zip" \
+            "dist/AYA-SOGI-CODEX-v${VERSION}.zip" \
+            "dist/SHA256SUMS.txt" \
+            --title "AYA SOGI ${VERSION}" \
+            --generate-notes \
+            --verify-tag
