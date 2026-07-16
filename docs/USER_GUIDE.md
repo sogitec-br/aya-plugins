@@ -103,7 +103,10 @@ uma consulta indisponível.
 
 ### MCP desconectado
 
-Confirme a instalação do plugin e conclua o OAuth novamente pelo cliente.
+Confirme a instalação do plugin e conclua o OAuth novamente pelo cliente. Se a autenticação foi
+feita depois de a tarefa atual ser aberta, crie uma nova tarefa no mesmo projeto antes de testar.
+Um endpoint configurado ou `list_mcp_resources` bem-sucedido não prova que as tools SOGI estão
+disponíveis naquela tarefa.
 
 ### Metodologia sem evidência
 

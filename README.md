@@ -23,7 +23,8 @@ codex plugin marketplace add sogitec-br/aya-plugins
 codex plugin add aya-sogi@aya-plugins
 ```
 
-Depois, abra uma nova tarefa no Codex e autentique sua própria conta SOGI quando solicitado.
+Depois, abra uma tarefa no Codex e autentique sua própria conta SOGI quando solicitado. Ao concluir
+o primeiro OAuth, abra outra tarefa no mesmo projeto para carregar as tools autenticadas.
 
 ## Instalação no Claude Code
 

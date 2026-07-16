@@ -2,6 +2,16 @@
 
 O MCP separa conhecimento, consultas operacionais e cadastro em rotas diferentes.
 
+## Disponibilidade na tarefa
+
+Configuracao e disponibilidade sao estados diferentes. Endpoint configurado, `enabled=true`,
+`Auth=OAuth` e `list_mcp_resources` nao provam que as tools SOGI foram injetadas na tarefa atual.
+Considere o MCP operacional somente quando uma tool SOGI estiver diretamente disponivel.
+
+Se o usuario concluir OAuth depois de a tarefa ter sido criada, abra uma nova tarefa no mesmo
+projeto antes de consultar. Nao use terminal, outro `codex exec` ou uma sessao aninhada como
+fallback para uma tarefa sem tools.
+
 ## Conhecimento metodologico
 
 Use `consultar_metodologia(pergunta)` diretamente para conceitos, funcionamento do SOGI,

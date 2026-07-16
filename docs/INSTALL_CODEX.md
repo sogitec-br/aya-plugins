@@ -19,13 +19,24 @@ codex plugin add aya-sogi@aya-plugins
 Também é possível abrir o navegador de plugins no Codex e localizar **AyA** depois de
 adicionar o marketplace.
 
+Se uma instalação antiga registrou o mesmo MCP manualmente, remova apenas esse registro global
+depois de confirmar que o plugin está instalado:
+
+```bash
+codex mcp remove sogi
+```
+
+O plugin já fornece `https://mcp.dev.ceppem.com/mcp`; manter as duas declarações cria conexões e
+diagnósticos duplicados.
+
 ## Primeiro uso
 
 1. feche a tarefa atual e abra uma nova tarefa;
 2. peça ao Codex para usar a AyA;
 3. selecione **Authenticate** quando o SOGI solicitar conexão;
 4. conclua o OAuth no navegador com sua própria conta;
-5. volte ao Codex e repita a pergunta.
+5. feche essa tarefa e abra outra no mesmo projeto;
+6. repita a pergunta na tarefa nova, que receberá o snapshot autenticado das tools.
 
 Nunca informe sua senha ao agente ou em arquivos do projeto.
 
@@ -50,7 +61,8 @@ Verifique, nesta ordem:
 2. plugin `aya-sogi` está instalado e habilitado;
 3. uma nova tarefa foi aberta após a instalação;
 4. OAuth foi concluído;
-5. o MCP `sogi` está conectado;
-6. a identidade possui autorização para a consulta solicitada.
+5. uma nova tarefa foi aberta depois do OAuth;
+6. uma tool SOGI aparece diretamente na tarefa;
+7. a identidade possui autorização para a consulta solicitada.
 
 Não publique logs com tokens ou dados SOGI em issues públicas.

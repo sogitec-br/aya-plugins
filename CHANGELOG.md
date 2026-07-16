@@ -2,6 +2,22 @@
 
 Todas as mudanças relevantes da AyA são registradas neste arquivo.
 
+## [0.2.1] - 2026-07-16
+
+### Corrigido
+
+- diagnóstico deixa de confundir MCP configurado ou OAuth reconhecido com tools disponíveis na
+  tarefa atual;
+- onboarding abre uma nova tarefa depois do primeiro OAuth, reconexão ou atualização, evitando
+  snapshots de tools criados antes da autenticação;
+- remoção de fallback por processo aninhado do Codex quando a tarefa atual não recebeu as tools;
+- manifesto Codex passa a respeitar o limite de três prompts sugeridos.
+
+### Documentado
+
+- `list_mcp_resources` não substitui a verificação das tools operacionais;
+- instalação canônica usa o MCP fornecido pelo plugin, sem um segundo registro global `sogi`.
+
 ## [0.2.0] - 2026-07-15
 
 ### Adicionado

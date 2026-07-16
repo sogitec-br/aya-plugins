@@ -1,7 +1,7 @@
 {
   "name": "aya-sogi",
   "displayName": "AyA",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Cliente operacional para dados autorizados, metodologia CEPPEM e cadastro aprovado via MCP.",
   "author": {
     "name": "CEPPEM"
