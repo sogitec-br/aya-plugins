@@ -1,6 +1,6 @@
 {
   "name": "aya-sogi",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Cliente operacional para dados autorizados, metodologia CEPPEM e cadastro aprovado via MCP.",
   "author": {
     "name": "CEPPEM",
@@ -25,7 +25,6 @@
     "defaultPrompt": [
       "Explique este conceito com base na metodologia CEPPEM.",
       "Analise a saúde da carteira e os riscos de retenção.",
-      "Mostre o pipeline de pedidos por status.",
       "Prepare o cadastro deste cliente para minha revisão."
     ],
     "composerIcon": "./assets/aya-agent-avatar.jpg",
