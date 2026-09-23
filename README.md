@@ -5,6 +5,10 @@ Plugins oficiais da AYA para Codex e Claude Code, conectados ao MCP SOGI/CEPPEM.
 > **Beta:** a versão `0.2.x` usa `https://mcp.dev.ceppem.com/mcp`. Utilize somente com contas e
 > dados autorizados para o ambiente de desenvolvimento.
 
+A migração para o MCP Go publicado depende da equivalência de OAuth, metodologia, consultas e
+cadastro. Consulte o [inventário e os critérios de corte](docs/MCP_MIGRATION_READINESS.md) antes de
+alterar a URL do plugin.
+
 ## O que a AYA oferece
 
 - consulta ao Agentic RAG de metodologia SOGI/CEPPEM;
@@ -87,6 +91,7 @@ fixos.
 - [Instalação no Claude Code](docs/INSTALL_CLAUDE.md)
 - [Guia do usuário](docs/USER_GUIDE.md)
 - [Arquitetura e limites de segurança](docs/ARCHITECTURE.md)
+- [Inventário e critérios de migração do MCP](docs/MCP_MIGRATION_READINESS.md)
 - [Processo de release](docs/RELEASE.md)
 - [Política de privacidade](PRIVACY.md)
 - [Termos de uso](TERMS_OF_USE.md)
